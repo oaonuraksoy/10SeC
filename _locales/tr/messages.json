@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "10SeC — Video Parçalayıcı & Bölücü",
+    "description": "Eklentinin mağazada ve tarayıcıda görünen resmi adı"
+  },
+  "extensionDescription": {
+    "message": "Videolarınızı 9.5 saniyelik parçalara bölün veya özel klip çıkartın. %100 yerel, sunucusuz ve gizli.",
+    "description": "Eklentinin mağazada görünen kısa açıklaması"
+  }
+}

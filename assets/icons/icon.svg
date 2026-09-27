@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c18" />
+      <stop offset="45%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <!-- Border Glow Gradient -->
+    <linearGradient id="borderGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="35%" stop-color="#6366f1" stop-opacity="0.5" />
+      <stop offset="70%" stop-color="#a855f7" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Ambient Glow Filters -->
+    <radialGradient id="radialCyan" cx="30%" cy="25%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="radialPink" cx="75%" cy="75%" r="50%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Segment 1 Gradient (Cyan -> Indigo) -->
+    <linearGradient id="segGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+
+    <!-- Segment 2 Gradient (Indigo -> Purple -> Pink) -->
+    <linearGradient id="segGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <!-- Segment 3 Gradient (Pink -> Rose) -->
+    <linearGradient id="segGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+
+    <!-- Badge Gradient -->
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter for Play Glyph -->
+    <filter id="glowShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#6366f1" flood-opacity="0.45" />
+    </filter>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141c2e" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0d1322" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <!-- Full-Bleed Solid Background (Edge-to-Edge, Zero Transparency) -->
+  <rect x="0" y="0" width="512" height="512" fill="url(#bgGrad)" />
+  <rect x="0" y="0" width="512" height="512" fill="url(#radialCyan)" />
+  <rect x="0" y="0" width="512" height="512" fill="url(#radialPink)" />
+  <rect x="0" y="0" width="512" height="512" fill="none" stroke="url(#borderGlow)" stroke-width="2" />
+
+  <!-- Inner Cinema Film Frame -->
+  <rect x="88" y="74" width="336" height="364" rx="28" ry="28" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5" stroke-opacity="0.5" />
+
+  <!-- Film Strip Top Sprockets (Perforations) -->
+  <g fill="#0b0f19" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4">
+    <rect x="114" y="90" width="26" height="13" rx="4" />
+    <rect x="156" y="90" width="26" height="13" rx="4" />
+    <rect x="198" y="90" width="26" height="13" rx="4" />
+    <rect x="240" y="90" width="26" height="13" rx="4" />
+    <rect x="282" y="90" width="26" height="13" rx="4" />
+  </g>
+
+  <!-- Top "10s" Badge & Pulse Indicator -->
+  <rect x="328" y="86" width="76" height="22" rx="11" fill="url(#badgeGrad)" stroke="#818cf8" stroke-width="1" stroke-opacity="0.6" />
+  <circle cx="342" cy="97" r="3.5" fill="#38bdf8" />
+  <text x="368" y="101" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">10.0s</text>
+
+  <!-- Film Strip Bottom Sprockets -->
+  <g fill="#0b0f19" stroke="#ec4899" stroke-width="1" stroke-opacity="0.4">
+    <rect x="114" y="409" width="26" height="13" rx="4" />
+    <rect x="156" y="409" width="26" height="13" rx="4" />
+    <rect x="198" y="409" width="26" height="13" rx="4" />
+    <rect x="240" y="409" width="26" height="13" rx="4" />
+    <rect x="282" y="409" width="26" height="13" rx="4" />
+    <rect x="324" y="409" width="26" height="13" rx="4" />
+    <rect x="366" y="409" width="26" height="13" rx="4" />
+  </g>
+
+  <!-- Central Laser Cut Guidelines (Dashed split tracks) -->
+  <g stroke-linecap="round">
+    <line x1="229" y1="140" x2="216" y2="345" stroke="#38bdf8" stroke-width="2" stroke-dasharray="5 4" stroke-opacity="0.6" />
+    <line x1="298" y1="168" x2="285" y2="318" stroke="#ec4899" stroke-width="2" stroke-dasharray="5 4" stroke-opacity="0.6" />
+  </g>
+
+  <!-- Cutting Diamond Sparks -->
+  <path d="M 229 135 L 232 142 L 239 145 L 232 148 L 229 155 L 226 148 L 219 145 L 226 142 Z" fill="#38bdf8" />
+  <path d="M 298 163 L 301 170 L 308 173 L 301 176 L 298 183 L 295 176 L 288 173 L 295 170 Z" fill="#ec4899" />
+
+  <!-- Segmented Play Symbol (3 Slices) with Glow Filter -->
+  <g filter="url(#glowShadow)">
+    <!-- Slice 1: 0s - 9.5s (Left Segment) -->
+    <path d="M 188 170 C 182 170 180 174 180 181 L 180 331 C 180 338 183 342 189 341 L 209 328 C 214 325 216 321 217 315 L 227 197 C 228 191 226 187 220 185 Z"
+          fill="url(#segGrad1)" />
+
+    <!-- Slice 2: 9.5s - 19s (Center Segment) -->
+    <path d="M 244 191 C 239 189 236 193 235 199 L 225 303 C 224 309 227 312 232 309 L 278 281 C 283 278 285 274 286 269 L 295 224 C 296 219 294 214 289 212 Z"
+          fill="url(#segGrad2)" />
+
+    <!-- Slice 3: 19s+ (Right Tip Segment) -->
+    <path d="M 312 222 C 307 220 304 223 303 229 L 294 272 C 293 277 296 280 301 277 L 358 259 C 363 257 363 251 358 249 Z"
+          fill="url(#segGrad3)" />
+  </g>
+
+  <!-- Segment Highlights (Subtle Top Glass Sheen) -->
+  <path d="M 188 172 L 220 187 C 217 191 214 195 212 202 L 182 188 C 183 180 185 174 188 172 Z" fill="#ffffff" fill-opacity="0.3" />
+  <path d="M 244 193 L 289 214 C 286 218 283 223 281 229 L 238 206 C 240 200 242 195 244 193 Z" fill="#ffffff" fill-opacity="0.3" />
+
+  <!-- Timeline Track (9.5s Segmentation Visualizer) -->
+  <g>
+    <!-- Track Bar 1 (0 to 9.5s) -->
+    <rect x="114" y="362" width="86" height="6" rx="3" fill="url(#segGrad1)" />
+    <!-- Track Bar 2 (9.5s to 19s) -->
+    <rect x="206" y="362" width="86" height="6" rx="3" fill="url(#segGrad2)" />
+    <!-- Track Bar 3 (19s to 28.5s) -->
+    <rect x="298" y="362" width="86" height="6" rx="3" fill="url(#segGrad3)" />
+
+    <!-- Time Marker Ticks -->
+    <circle cx="203" cy="365" r="4.5" fill="#38bdf8" stroke="#080c18" stroke-width="1.5" />
+    <circle cx="295" cy="365" r="4.5" fill="#ec4899" stroke="#080c18" stroke-width="1.5" />
+
+    <!-- Timeline Labels -->
+    <text x="114" y="384" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#64748b">0s</text>
+    <text x="203" y="384" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="800" fill="#38bdf8" text-anchor="middle">9.5s</text>
+    <text x="295" y="384" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="800" fill="#ec4899" text-anchor="middle">19s</text>
+    <text x="384" y="384" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#64748b" text-anchor="end">28.5s</text>
+  </g>
+</svg>

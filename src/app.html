@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10SeC — 9.5 Saniyelik Video Parçalayıcı & Özel Klip Çıkarıcı</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/icon32.png">
+  <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header / Üst Menü
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-link" id="brandLogoHome">
+        <div class="brand-logo-wrap">
+          <img src="../assets/icons/icon.svg" alt="10SeC Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-info">
+          <div class="brand-name">
+            <span data-i18n="appName">10SeC</span>
+            <span class="brand-badge">v1.0</span>
+          </div>
+          <span class="brand-tagline" data-i18n="appTagline">9.5 Saniyelik Video Parçalayıcı</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Dil Değiştirici -->
+        <div class="lang-switcher" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang-btn="tr">TR</button>
+          <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        </div>
+
+        <!-- Gizlilik Politikası Butonu -->
+        <button type="button" class="header-link-btn" id="headerPrivacyBtn" title="Gizlilik Politikası">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+          </svg>
+          <span data-i18n="privacyPolicyBtn">Gizlilik</span>
+        </button>
+
+        <!-- GitHub Kaynak Kodu -->
+        <a href="https://github.com/oaonuraksoy/10SeC" target="_blank" rel="noopener noreferrer" class="header-link-btn" title="GitHub">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Ana İçerik Alanı
+       ========================================================================== -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Hero & Başlık Bölümü -->
+      <section class="hero-section">
+        <div class="hero-pill-badge">
+          <span class="hero-pill-dot"></span>
+          <span data-i18n="badgeClientSide">100% İstemci Taraflı & Güvenli</span>
+        </div>
+        <h1 class="hero-title" data-i18n="heroHeadline">Videolarınızı 9.5 saniyelik parçalara bölün.</h1>
+        <p class="hero-subtitle" data-i18n="heroSubline">
+          WhatsApp Durum ve Instagram Hikayeleri için tarayıcınızda sunucusuz ve %100 gizli şekilde bölün.
+        </p>
+
+        <div class="hero-features">
+          <span class="feature-tag">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <span data-i18n="featureFast">Sıfır Sunucu — %100 Yerel</span>
+          </span>
+          <span class="feature-tag">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <span data-i18n="featureStories">9.5s WhatsApp & Instagram Uyumlu</span>
+          </span>
+          <span class="feature-tag">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <span data-i18n="featureLossless">Hızlı & Kayıpsız Remux</span>
+          </span>
+        </div>
+      </section>
+
+      <!-- Hata & Uyarı Bildirim Kartı -->
+      <div id="alertCard" class="alert-card warning" role="alert">
+        <svg class="alert-icon" viewBox="0 0 24 24">
+          <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+        </svg>
+        <div class="alert-content">
+          <div class="alert-title" id="alertTitle">Uyarı</div>
+          <div class="alert-desc" id="alertDesc">Mesaj metni...</div>
+        </div>
+        <button type="button" class="alert-close" id="alertCloseBtn" aria-label="Kapat">
+          <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+
+      <!-- Sürükle & Bırak Yükleme Alanı (Dropzone) -->
+      <div id="dropzoneContainer" class="dropzone-container">
+        <input type="file" id="videoFileInput" accept="video/mp4,video/webm,video/quicktime,video/x-matroska,.mp4,.webm,.mov,.mkv" style="display: none;">
+        
+        <div class="dropzone-icon-box">
+          <svg viewBox="0 0 24 24">
+            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+          </svg>
+        </div>
+
+        <h3 class="dropzone-title" data-i18n="dropzoneTitle">Videonuzu buraya sürükleyin veya seçin</h3>
+        <p class="dropzone-subtitle" data-i18n="dropzoneSubtitle">MP4, WebM, MOV veya MKV formatlarını destekler</p>
+
+        <button type="button" class="dropzone-btn" id="browseFileBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
+          </svg>
+          <span data-i18n="dropzoneBrowseBtn">Video Dosyası Seç</span>
+        </button>
+
+        <div class="dropzone-badges">
+          <span class="badge-warning-amber">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            <span data-i18n="dropzoneMaxDurationBadge">Azami Süre: 90 Saniye</span>
+          </span>
+        </div>
+
+        <p class="dropzone-hint" data-i18n="dropzoneHint">Tüm işlemler doğrudan cihazınızın işlemcisinde gerçekleşir. Dosyalarınız asla internete yüklenmez.</p>
+      </div>
+
+      <!-- Video Önizleme ve Kontrol Alanı -->
+      <section id="previewCard" class="preview-card">
+        <div class="preview-grid">
+          <div class="preview-video-box">
+            <video id="previewPlayer" class="preview-video-player" controls playsinline preload="metadata"></video>
+          </div>
+
+          <div class="preview-details">
+            <div class="preview-header">
+              <h3 class="preview-heading" data-i18n="previewTitle">Seçilen Video Bilgileri</h3>
+            </div>
+
+            <div class="meta-stats-grid">
+              <div class="meta-item">
+                <div class="meta-label" data-i18n="labelFileName">Dosya Adı</div>
+                <div class="meta-value" id="metaFileName">-</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label" data-i18n="labelDuration">Süre</div>
+                <div class="meta-value" id="metaDuration">-</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label" data-i18n="labelResolution">Çözünürlük</div>
+                <div class="meta-value" id="metaResolution">-</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label" data-i18n="labelFileSize">Dosya Boyutu</div>
+                <div class="meta-value" id="metaFileSize">-</div>
+              </div>
+            </div>
+
+            <!-- Mod Seçici Sekmeler (Tabs / Switcher) -->
+            <div class="mode-switcher-container">
+              <div class="mode-tabs" role="tablist">
+                <button type="button" class="mode-tab active" id="tabAutoSplit" role="tab" aria-selected="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z"/></svg>
+                  <span data-i18n="modeAutoSplit">Otomatik Bölme (9.5s)</span>
+                </button>
+                <button type="button" class="mode-tab" id="tabCustomClip" role="tab" aria-selected="false">
+                  <svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z"/></svg>
+                  <span data-i18n="modeCustomClip">Özel Klip Çıkar</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Mod 1: Otomatik Bölme Paneli -->
+            <div id="panelAutoSplit" class="mode-panel active" role="tabpanel" aria-labelledby="tabAutoSplit">
+              <div class="meta-item highlight" style="margin-bottom: 1.25rem;">
+                <div class="meta-label" data-i18n="labelEstimatedParts">Tahmini Parça</div>
+                <div class="meta-value" id="metaPartsCount">-</div>
+              </div>
+
+              <div class="preview-actions">
+                <button type="button" class="btn-primary-action" id="btnStartProcess">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  <span data-i18n="btnStartSplitting">Parçalara Bölmeye Başla</span>
+                </button>
+                <button type="button" class="btn-secondary-action" id="btnChangeFile">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 8l-4 4h3c0 3.31-2.69 6-6 6-1.01 0-1.97-.25-2.8-.7l-1.46 1.46C8.97 19.54 10.43 20 12 20c4.42 0 8-3.58 8-8h3l-4-4zM6 12c0-3.31 2.69-6 6-6 1.01 0 1.97.25 2.8.7l1.46-1.46C15.03 4.46 13.57 4 12 4c-4.42 0-8 3.58-8 8H1l4 4 4-4H6z"/></svg>
+                  <span data-i18n="btnChangeVideo">Farklı Video Seç</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Mod 2: Özel Klip Çıkarma Paneli (İnteraktif Timeline) -->
+            <div id="panelCustomClip" class="mode-panel" role="tabpanel" aria-labelledby="tabCustomClip">
+              <div class="timeline-container">
+                <div class="timeline-hint">
+                  <svg viewBox="0 0 24 24"><path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"/></svg>
+                  <span data-i18n="timelineHint">Zaman çizelgesindeki barı sürükleyin veya kenarlarından tutup süresini ayarlayın (Maks. 9.5 sn).</span>
+                </div>
+
+                <!-- İnteraktif Timeline Bileşeni -->
+                <div class="timeline-wrapper" id="timelineWrapper">
+                  <div class="timeline-track" id="timelineTrack">
+                    <!-- Sürüklenebilir ve Boyutlandırılabilir Seçim Barı -->
+                    <div class="timeline-range-bar" id="timelineRangeBar">
+                      <div class="timeline-handle handle-left" id="handleLeft" title="Başlangıç">
+                        <span class="handle-bar"></span>
+                      </div>
+                      <div class="timeline-range-content">
+                        <span class="range-drag-indicator"></span>
+                      </div>
+                      <div class="timeline-handle handle-right" id="handleRight" title="Bitiş">
+                        <span class="handle-bar"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Zaman Cetveli -->
+                  <div class="timeline-ruler">
+                    <span class="ruler-mark" id="rulerStart">00:00.0</span>
+                    <span class="ruler-mark" id="rulerMid">--:--</span>
+                    <span class="ruler-mark" id="rulerEnd">--:--</span>
+                  </div>
+                </div>
+
+                <!-- Canlı Zaman Gösterge Rozetleri -->
+                <div class="clip-stats-row">
+                  <div class="stat-badge">
+                    <span class="stat-badge-label" data-i18n="startTimeLabel">Başlangıç</span>
+                    <span class="stat-badge-value" id="clipStartTime">00:00.0</span>
+                  </div>
+                  <div class="stat-badge duration-badge">
+                    <span class="stat-badge-label" data-i18n="clipDurationLabel">Klip Süresi</span>
+                    <span class="stat-badge-value duration-val" id="clipDuration">9.5s</span>
+                    <span class="max-badge" data-i18n="maxLimitBadge">Maks. 9.5s</span>
+                  </div>
+                  <div class="stat-badge">
+                    <span class="stat-badge-label" data-i18n="endTimeLabel">Bitiş</span>
+                    <span class="stat-badge-value" id="clipEndTime">00:09.5</span>
+                  </div>
+                </div>
+
+                <div class="preview-actions">
+                  <button type="button" class="btn-primary-action btn-emerald-action" id="btnExtractClip">
+                    <svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+                    <span data-i18n="btnExtractClip">Seçili Klibi Çıkart</span>
+                  </button>
+                  <button type="button" class="btn-secondary-action" id="btnChangeFileClip">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 8l-4 4h3c0 3.31-2.69 6-6 6-1.01 0-1.97-.25-2.8-.7l-1.46 1.46C8.97 19.54 10.43 20 12 20c4.42 0 8-3.58 8-8h3l-4-4zM6 12c0-3.31 2.69-6 6-6 1.01 0 1.97.25 2.8.7l1.46-1.46C15.03 4.46 13.57 4 12 4c-4.42 0-8 3.58-8 8H1l4 4 4-4H6z"/></svg>
+                    <span data-i18n="btnChangeVideo">Farklı Video Seç</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- İşlem İlerleme Alanı (Progress Card) -->
+      <section id="progressCard" class="progress-card">
+        <div class="progress-spinner"></div>
+        <h3 class="progress-title" data-i18n="progressTitle">Video Bölünüyor...</h3>
+        <p class="progress-subtext" data-i18n="progressSubtext">Lütfen işlem tamamlanana kadar bu sekmeyi açık tutun.</p>
+
+        <div class="progress-bar-container">
+          <div class="progress-bar-track">
+            <div id="progressBarFill" class="progress-bar-fill"></div>
+          </div>
+        </div>
+
+        <div class="progress-meta-row">
+          <span class="progress-status-text" id="progressStatusText">Hazırlanıyor...</span>
+          <span class="progress-percent-text" id="progressPercentText">0%</span>
+        </div>
+      </section>
+
+      <!-- Sonuçlar & Parçalar Alanı (Results Section) -->
+      <section id="resultsSection" class="results-section">
+        <!-- Aksiyon Banner'ı -->
+        <div class="results-action-banner">
+          <div class="results-banner-text">
+            <h3 data-i18n="resultsTitle">Parçalama Tamamlandı!</h3>
+            <p id="resultsSubtitle" data-i18n="resultsSubtitle">Videonuz başarıyla parçalara ayrıldı.</p>
+          </div>
+
+          <div class="results-banner-buttons">
+            <button type="button" class="btn-download-zip" id="btnDownloadAllZip">
+              <svg viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10zM12 9l-4 4h3v3h2v-3h3l-4-4z"/></svg>
+              <span data-i18n="btnDownloadAllZip">Tüm Parçaları ZIP Olarak İndir</span>
+            </button>
+            <button type="button" class="btn-secondary-action" id="btnNewVideo">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+              <span data-i18n="btnNewVideo">Yeni Video Böl</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Parça Kartları Izgarası -->
+        <div id="segmentsGrid" class="segments-grid">
+          <!-- Dinamik olarak app.js tarafından doldurulacak -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       Geliştirici & Sosyal Alanı (Footer)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Profil Bilgileri -->
+        <div class="dev-profile">
+          <div class="dev-avatar">
+            <div class="dev-avatar-inner">OA</div>
+          </div>
+          <div class="dev-info">
+            <h4 data-i18n="developerName">Onur Aksoy</h4>
+            <p data-i18n="developerRole">Yazılım Geliştirici & Tasarımcı</p>
+            <div class="dev-links">
+              <a href="https://onuraksoy.com.tr" target="_blank" rel="noopener noreferrer" class="dev-link-pill">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                <span data-i18n="linkWebsite">Web Sitesi</span>
+              </a>
+              <a href="mailto:dev@onuraksoy.com.tr" class="dev-link-pill">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span data-i18n="linkEmail">dev@onuraksoy.com.tr</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sosyal Medya İkonları -->
+        <div class="footer-social-section">
+          <h5 data-i18n="socialLinksTitle">Sosyal Medya & Bağlantılar</h5>
+          <div class="social-icons-grid">
+            <!-- GitHub -->
+            <a href="https://github.com/oaonuraksoy/10SeC" target="_blank" rel="noopener noreferrer" class="social-icon-btn" data-platform="github" title="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/onuraksoy" target="_blank" rel="noopener noreferrer" class="social-icon-btn" data-platform="linkedin" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://instagram.com/onuraksoy" target="_blank" rel="noopener noreferrer" class="social-icon-btn" data-platform="instagram" title="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <!-- YouTube -->
+            <a href="https://youtube.com/@onuraksoy" target="_blank" rel="noopener noreferrer" class="social-icon-btn" data-platform="youtube" title="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@onuraksoy" target="_blank" rel="noopener noreferrer" class="social-icon-btn" data-platform="tiktok" title="TikTok">
+              <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+            <!-- Web -->
+            <a href="https://onuraksoy.com.tr" target="_blank" rel="noopener noreferrer" class="social-icon-btn" data-platform="website" title="Website">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </a>
+            <!-- Email -->
+            <a href="mailto:dev@onuraksoy.com.tr" class="social-icon-btn" data-platform="email" title="E-Posta">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <span data-i18n="footerOpenSourceNotice">Açık Kaynak & %100 İstemci Taraflı (Client-Side) — Hiçbir video sunucuya gönderilmez.</span>
+        </div>
+        <div>
+          <button type="button" class="footer-privacy-link" id="footerPrivacyBtn" data-i18n="privacyPolicyBtn">Gizlilik Politikası</button>
+          <span> • </span>
+          <span data-i18n="copyright">© 2026 Onur Aksoy. Tüm hakları saklıdır.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Gizlilik Politikası Modal Penceresi
+       ========================================================================== -->
+  <div id="privacyModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modalTitle" data-i18n="privacyModalTitle">10SeC — Gizlilik Politikası</h3>
+        <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Kapat">
+          <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h4>1. Sıfır Veri Toplama & Sunucusuz Mimari (Zero Data Collection)</h4>
+        <p>10SeC, hiçbir kişisel veriyi, kullanım metriğini, dosya bilgisini veya tarama geçmişini <strong>TOPLAMAZ</strong>, kaydetmez veya üçüncü taraflarla paylaşmaz. Tüm video işleme süreci doğrudan tarayıcınızın WebAssembly (FFmpeg WASM) motorunda yerel olarak yürütülür.</p>
+
+        <h4>2. Videolarınız Asla Bilgisayarınızdan Ayrılmaz</h4>
+        <p>Yüklediğiniz videolar hiçbir harici sunucuya veya bulut ortamına gönderilmez. İşlem tamamen cihazınızın RAM ve CPU belleğinde tamamlanır. Sekmeyi kapattığınızda veya yeni video yüklediğinizde geçici bellek otomatik temizlenir.</p>
+
+        <h4>3. Kullanılan İzinler</h4>
+        <ul>
+          <li><strong>storage:</strong> Sadece kullanıcı arayüzü dil tercihinizi (Türkçe/İngilizce) yerel tarayıcınızda hatırlamak amacıyla kullanılır.</li>
+        </ul>
+
+        <h4>4. Geliştirici ve İletişim</h4>
+        <p>Her türlü soru, öneri ve destek talebiniz için geliştiriciye doğrudan ulaşabilirsiniz:</p>
+        <p><strong>Geliştirici:</strong> Onur Aksoy<br>
+        <strong>E-Posta:</strong> <a href="mailto:dev@onuraksoy.com.tr" style="color: var(--primary-light);">dev@onuraksoy.com.tr</a><br>
+        <strong>Web:</strong> <a href="https://onuraksoy.com.tr" target="_blank" rel="noopener noreferrer" style="color: var(--primary-light);">onuraksoy.com.tr</a></p>
+      </div>
+
+      <div class="modal-footer">
+        <a href="https://oaonuraksoy.github.io/10SeC/privacy.html" target="_blank" rel="noopener noreferrer" class="btn-modal-link">
+          <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+          <span data-i18n="privacyDocsBtn">Web'de Oku</span>
+        </a>
+        <button type="button" class="btn-secondary-action" id="modalConfirmBtn" data-i18n="privacyModalClose">Kapat</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Yerel Script Bağımlılıkları (%100 CDN-Free)
+       ========================================================================== -->
+  <script src="../lib/jszip.min.js"></script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

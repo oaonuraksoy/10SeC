@@ -1,0 +1,28 @@
+{
+  "name": "10sec",
+  "version": "1.0.0",
+  "description": "Video Splitter & Timeline Trimmer Browser Extension",
+  "homepage": "https://oaonuraksoy.github.io/10SeC/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oaonuraksoy/10SeC.git"
+  },
+  "author": "Onur Aksoy <dev@onuraksoy.com.tr>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "generate:icons": "node scripts/generate-icons.js",
+    "copy:libs": "node scripts/copy-libs.js",
+    "test": "node tests/verify-all.js",
+    "build:zip": "node scripts/build-zip.js"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  },
+  "dependencies": {
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "jszip": "^3.10.2"
+  }
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası — 10SeC Video Splitter</title>
+  <meta name="description" content="10SeC tarayıcı eklentisi gizlilik politikası. Sıfır veri toplama, %100 istemci taraflı yerel işlem garantisi.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/icon32.png">
+  <style>
+    :root {
+      --bg-darkest: #070a12;
+      --bg-main: #0b1120;
+      --bg-card: rgba(17, 24, 39, 0.75);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-card: rgba(255, 255, 255, 0.12);
+      --primary: #6366f1;
+      --primary-light: #818cf8;
+      --emerald-light: #34d399;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-darkest);
+      background-image: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.15), transparent);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Navbar */
+    .navbar {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(7, 10, 18, 0.85);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .brand img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .brand-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff 40%, #c7d2fe 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-back {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .nav-back:hover {
+      color: var(--primary-light);
+    }
+
+    /* Content */
+    .policy-content {
+      padding: 4rem 0 5rem;
+    }
+
+    .policy-header {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .badge-privacy {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 1rem;
+      border-radius: 9999px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--emerald-light);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+
+    .policy-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .last-updated {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .card-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 2.25rem;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .card-section h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .card-section h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .card-section p {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .card-section ul {
+      list-style-position: inside;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      padding-left: 0.5rem;
+    }
+
+    .card-section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .lang-divider {
+      text-align: center;
+      margin: 3.5rem 0 2.5rem;
+      position: relative;
+    }
+
+    .lang-divider::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--border-card);
+      z-index: 1;
+    }
+
+    .lang-divider span {
+      position: relative;
+      z-index: 2;
+      background: var(--bg-darkest);
+      padding: 0.5rem 1.5rem;
+      border: 1px solid var(--border-card);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: auto;
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--border-subtle);
+      background: rgba(7, 10, 18, 0.95);
+      text-align: center;
+    }
+
+    .footer a {
+      color: var(--primary-light);
+      text-decoration: none;
+    }
+
+    .footer p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="../assets/icons/icon.svg" alt="10SeC Logo">
+        <span class="brand-title">10SeC</span>
+      </a>
+      <a href="index.html" class="nav-back">
+        ← Ana Sayfaya Dön
+      </a>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="policy-content">
+    <div class="container">
+      
+      <header class="policy-header">
+        <div class="badge-privacy">
+          🛡️ %100 Yerel İşlem & Sıfır Veri Toplama
+        </div>
+        <h1 class="policy-title">Gizlilik Politikası / Privacy Policy</h1>
+        <p class="last-updated">Son Güncelleme / Last Updated: 27 Eylül 2026</p>
+      </header>
+
+      <!-- Türkçe Bölüm -->
+      <section class="card-section">
+        <h2>🇹🇷 Türkçe — Gizlilik Beyanı</h2>
+
+        <p>
+          Bu Gizlilik Politikası, <strong>10SeC (Video Parçalayıcı & Özel Klip Çıkarıcı)</strong> tarayıcı eklentisinin verilerinizi nasıl işlediğini açıklamaktadır.
+        </p>
+
+        <h3>1. Sıfır Veri Toplama ve Sunucusuz Mimari</h3>
+        <p>
+          10SeC eklentisi hiçbir kişisel veriyi, kullanım metriğini, cihaz bilgisini veya tarama geçmişini <strong>TOPLAMAZ</strong>, saklamaz, iletmez veya üçüncü taraflarla paylaşmaz.
+        </p>
+
+        <h3>2. Videolarınız Asla Bilgisayarınızdan Dışarı Çıkmaz</h3>
+        <p>
+          Eklenti, WebAssembly (FFmpeg WASM) teknolojisi sayesinde tamamen tarayıcınızın yerel belleğinde çalışır. Seçtiğiniz veya kırptığınız hiçbir video dosyası uzak bir sunucuya, bulut servisine veya harici bir sisteme yüklenmez. Tüm video işleme yerel işlemcinizde ve RAM'inizde gerçekleşir.
+        </p>
+
+        <h3>3. Kullanılan İzinler</h3>
+        <ul>
+          <li><strong>storage:</strong> Yalnızca seçtiğiniz arayüz dil tercihini (Türkçe/İngilizce) tarayıcınızda yerel olarak hatırlamak amacıyla kullanılır.</li>
+        </ul>
+
+        <h3>4. Üçüncü Taraf Hizmetler & Çerezler</h3>
+        <p>
+          Eklenti hiçbir reklam ağı, analitik takip kodu (Google Analytics vb.) veya izleme çerezi barındırmaz. %100 çevrimdışı (offline) çalışabilir.
+        </p>
+
+        <h3>5. Geliştirici ve İletişim</h3>
+        <p>
+          Her türlü soru ve destek talebiniz için doğrudan geliştiriciye ulaşabilirsiniz:
+        </p>
+        <p>
+          <strong>Geliştirici:</strong> Onur Aksoy<br>
+          <strong>E-Posta:</strong> <a href="mailto:dev@onuraksoy.com.tr" style="color: var(--primary-light);">dev@onuraksoy.com.tr</a><br>
+          <strong>Web Sitesi:</strong> <a href="https://onuraksoy.com.tr" target="_blank" rel="noopener noreferrer" style="color: var(--primary-light);">onuraksoy.com.tr</a><br>
+          <strong>GitHub:</strong> <a href="https://github.com/oaonuraksoy/10SeC" target="_blank" rel="noopener noreferrer" style="color: var(--primary-light);">github.com/oaonuraksoy/10SeC</a>
+        </p>
+      </section>
+
+      <!-- Dil Ayracı -->
+      <div class="lang-divider">
+        <span>English Version</span>
+      </div>
+
+      <!-- English Section -->
+      <section class="card-section">
+        <h2>🇬🇧 English — Privacy Policy</h2>
+
+        <p>
+          This Privacy Policy describes how the <strong>10SeC (Video Splitter & Trimmer)</strong> browser extension handles your information.
+        </p>
+
+        <h3>1. Zero Data Collection & Serverless Architecture</h3>
+        <p>
+          The Extension <strong>DOES NOT</strong> collect, store, transmit, or share any personal data, usage metrics, or browsing activity.
+        </p>
+
+        <h3>2. Your Videos Never Leave Your Device</h3>
+        <p>
+          The Extension operates 100% locally within your browser using client-side WebAssembly technology. All video processing, trimming, and splitting occurs entirely in your browser's local memory. No video files or frames are ever uploaded to any external server or third-party service.
+        </p>
+
+        <h3>3. Permissions Used</h3>
+        <ul>
+          <li><strong>storage:</strong> Used solely to remember your preferred language settings (Turkish/English) locally on your device.</li>
+        </ul>
+
+        <h3>4. Third-Party Services & Tracking</h3>
+        <p>
+          The Extension does not use any third-party analytics, tracking pixels, or advertising networks. It operates entirely offline without external network calls.
+        </p>
+
+        <h3>5. Contact Information</h3>
+        <p>
+          If you have any questions regarding this Privacy Policy, please contact:
+        </p>
+        <p>
+          <strong>Developer:</strong> Onur Aksoy<br>
+          <strong>Email:</strong> <a href="mailto:dev@onuraksoy.com.tr" style="color: var(--primary-light);">dev@onuraksoy.com.tr</a><br>
+          <strong>Website:</strong> <a href="https://onuraksoy.com.tr" target="_blank" rel="noopener noreferrer" style="color: var(--primary-light);">onuraksoy.com.tr</a>
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Onur Aksoy. 10SeC açık kaynak ve MIT lisanslıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

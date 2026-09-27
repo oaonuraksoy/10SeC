@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "10SeC — Video Splitter & Timeline Trimmer",
+    "description": "Official name of the extension shown in the web store and browser toolbar"
+  },
+  "extensionDescription": {
+    "message": "Split videos into 9.5s clips or trim custom clips locally in your browser with zero server costs & 100% privacy.",
+    "description": "Short description of the extension shown in the web store"
+  }
+}

@@ -1,0 +1,24 @@
+# Node dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+
+# Internal Architecture & Spec-Driven Development Files (Excluded from public repo)
+specs/
+plans/
+decisions/
+agents/
+AGENTS.md
+CONTEXT.md
+ARCHITECTURE.md
+docs/TESTING.md
+tests/
+scripts/
+
+# OS & temporary files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
